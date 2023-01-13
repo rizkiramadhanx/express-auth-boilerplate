@@ -126,6 +126,7 @@ const sendCookie = async (user, statusCode, msg, code, res) => {
   res.cookie('token', token, {
     httpOnly: true,
     maxAge: 7 * 24 * 3600 * 1000,
+    sameSite: 'none',
   });
   res.status(statusCode).json({
     success: true,
