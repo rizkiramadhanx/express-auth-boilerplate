@@ -5,7 +5,11 @@
  *
  * */
 const corsOptions = {
-  origin: ['http://localhost:3000', 'https://railway.app'],
+  origin: [
+    'http://localhost:3000',
+    'https://auth-nextjs-middleware-production.up.railway.app/',
+    'railway.app/',
+  ],
   optionsSuccessStatus: 200,
   credentials: true,
 };
