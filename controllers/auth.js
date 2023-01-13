@@ -1,6 +1,7 @@
 const User = require('../models/User');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const dotenv = require('dotenv');
 
 /*
     This is registration controller.
@@ -8,6 +9,8 @@ const jwt = require('jsonwebtoken');
     from user. Check if its already in DB
     if not it'll save it with hashed password
 */
+
+dotenv.config();
 
 exports.register = async (req, res, next) => {
   const { username, email, password } = req.body;

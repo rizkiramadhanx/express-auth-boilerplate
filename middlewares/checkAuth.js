@@ -1,10 +1,12 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
+const dotenv = require('dotenv');
 
 /*
     This is protection middleware. It will check if user 
     is authenticated.
 */
+dotenv.config();
 
 exports.checkAuth = async (req, res, next) => {
   const cookie = req.cookies;
