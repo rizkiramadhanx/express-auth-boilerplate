@@ -1,4 +1,4 @@
-require('dotenv').config({ path: './config.env' });
+const dotenv = require('dotenv');
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -8,6 +8,8 @@ const connectDB = require('./config/db');
 const corsOptions = require('./utils/corsOptions');
 const app = express();
 connectDB();
+
+dotenv.config();
 const { checkAuth } = require('./middlewares/checkAuth');
 /**
  *   Enabled CORS on the website so you will not get
